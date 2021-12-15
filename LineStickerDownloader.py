@@ -29,8 +29,12 @@ if __name__ == '__main__':
     while 1 :
         url = input("Enter the lineshop url: (enter 'exit' to exit')\n")
         if url == 'exit': exit(0)
-        items = get_stickers_list(url=url)
-        download(items)
-        print('Download complete! Current file name counter: ' + str(counter))
+        try:
+            items = get_stickers_list(url=url)
+            download(items)
+            print('Download complete! Current file name counter: ' + str(counter))
+        except:
+            print('Invalid URL!')
+
 
 
