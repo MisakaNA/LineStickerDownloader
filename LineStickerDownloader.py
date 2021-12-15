@@ -31,6 +31,6 @@ if __name__ == '__main__':
         if url == 'exit': exit(0)
         items = get_stickers_list(url=url)
         download(items)
-        print('Download complete! Current file name counter: ' + counter)
+        print('Download complete! Current file name counter: ' + str(counter))
 
 
